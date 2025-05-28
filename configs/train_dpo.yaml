@@ -1,0 +1,100 @@
+# ScriptArguments
+# Parameters that are common to all scripts
+dataset_name: 12kimih/HiCUPID
+dataset_config: null
+dataset_train_split: train
+dataset_test_split: test
+gradient_checkpointing_use_reentrant: false
+ignore_bias_buffers: false
+# Parameters that are specific to each script
+prompt: zero/system
+relevant: false
+num_exclude: null
+train_seed: 42
+
+# DPOConfig
+# Parameters that control the model and reference model
+model_init_kwargs: null
+ref_model_init_kwargs: null
+model_adapter_name: null
+ref_adapter_name: null
+force_use_ref_model: false
+disable_dropout: true
+use_logits_to_keep: false
+# Parameters that control the data preprocessing
+dataset_num_proc: 16
+padding_value: null
+label_pad_token_id: -100
+max_prompt_length: 9728
+max_completion_length: 512
+max_length: 10240
+truncation_mode: keep_end
+padding_free: false
+precompute_ref_log_probs: false
+precompute_ref_batch_size: null
+tools: null
+# Parameters that control the training
+learning_rate: 1e-6
+loss_type: sigmoid
+beta: 0.1
+f_divergence_type: reverse_kl
+f_alpha_divergence_coef: 1.0
+reference_free: false
+label_smoothing: 0.0
+use_weighting: false
+rpo_alpha: null
+discopop_tau: 0.05
+sync_ref_model: false
+ref_model_mixup_alpha: 0.9
+ref_model_sync_steps: 64
+# Parameters that control the logging
+generate_during_eval: false
+
+# TrainingArguments
+output_dir: output/peft/dpo/lr/1e-6/Llama-3.1-8B-Instruct
+eval_strategy: "no"
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 64
+torch_empty_cache_steps: 1
+weight_decay: 0.0
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1e-8
+max_grad_norm: 0.3
+num_train_epochs: 1
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+logging_steps: 1
+save_strategy: steps
+save_steps: 0.1
+save_total_limit: 1
+bf16: true
+tf32: true
+dataloader_num_workers: 16
+optim: adamw_torch_fused
+report_to: tensorboard
+push_to_hub: false
+resume_from_checkpoint: null
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+use_liger_kernel: true
+
+# ModelConfig
+model_name_or_path: meta-llama/Llama-3.1-8B-Instruct
+model_revision: main
+torch_dtype: bfloat16
+trust_remote_code: false
+attn_implementation: flash_attention_2
+use_peft: true
+lora_r: 256
+lora_alpha: 512
+lora_dropout: 0.05
+lora_target_modules: all-linear
+lora_modules_to_save: null
+lora_task_type: CAUSAL_LM
+use_rslora: false
+load_in_8bit: false
+load_in_4bit: false
+bnb_4bit_quant_type: nf4
+use_bnb_nested_quant: false

@@ -1,0 +1,77 @@
+# ScriptArguments
+# Parameters that are common to all scripts
+dataset_name: 12kimih/HiCUPID
+dataset_config: null
+dataset_train_split: train
+dataset_test_split: test
+gradient_checkpointing_use_reentrant: false
+ignore_bias_buffers: false
+# Parameters that are specific to each script
+prompt: zero/system
+relevant: false
+num_exclude: null
+train_seed: 42
+
+# SFTConfig
+# Parameters that control the model
+model_init_kwargs: null
+use_liger: true
+# Parameters that control the data preprocessing
+dataset_text_field: text
+dataset_kwargs:
+  skip_prepare_dataset: true
+dataset_num_proc: 16
+max_seq_length: 20480
+packing: false
+eval_packing: null
+# Parameters that control the training
+learning_rate: 1e-4
+
+# TrainingArguments
+output_dir: output/peft/sft/lr/1e-4/Llama-3.1-8B-Instruct
+eval_strategy: "no"
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 64
+torch_empty_cache_steps: 1
+weight_decay: 0.0
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1e-8
+max_grad_norm: 0.3
+num_train_epochs: 1
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+logging_steps: 1
+save_strategy: steps
+save_steps: 0.1
+save_total_limit: 1
+bf16: true
+tf32: true
+dataloader_num_workers: 16
+remove_unused_columns: false
+optim: adamw_torch_fused
+report_to: tensorboard
+push_to_hub: false
+resume_from_checkpoint: null
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+
+# ModelConfig
+model_name_or_path: meta-llama/Llama-3.1-8B-Instruct
+model_revision: main
+torch_dtype: bfloat16
+trust_remote_code: false
+attn_implementation: flash_attention_2
+use_peft: true
+lora_r: 256
+lora_alpha: 512
+lora_dropout: 0.05
+lora_target_modules: all-linear
+lora_modules_to_save: null
+lora_task_type: CAUSAL_LM
+use_rslora: false
+load_in_8bit: false
+load_in_4bit: false
+bnb_4bit_quant_type: nf4
+use_bnb_nested_quant: false

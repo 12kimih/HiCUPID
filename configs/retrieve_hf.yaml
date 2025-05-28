@@ -1,0 +1,23 @@
+# RetrievalConfig
+model: facebook/contriever
+dataset: 12kimih/HiCUPID
+batch_size: 256
+num_proc: 16
+log_every: 10
+split: null
+type: null
+num_samples: null
+save_dir: null
+seed: 42
+
+# ModelConfig
+model_name_or_path: null
+model_revision: main
+torch_dtype: float32
+trust_remote_code: false
+attn_implementation: null
+use_peft: false
+load_in_8bit: false
+load_in_4bit: false
+bnb_4bit_quant_type: nf4
+use_bnb_nested_quant: false

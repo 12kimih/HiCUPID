@@ -1,0 +1,9 @@
+# BleuRougeConfig
+dataset: zero/system/Llama-3.1-8B-Instruct
+num_proc: 64
+split: null
+type: null
+num_samples: null
+load_dir: null
+save_dir: null
+seed: 42

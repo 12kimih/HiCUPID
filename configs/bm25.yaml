@@ -1,0 +1,8 @@
+# BM25Config
+dataset: 12kimih/HiCUPID
+num_proc: 64
+split: null
+type: null
+num_samples: null
+save_dir: null
+seed: 42

@@ -1,0 +1,36 @@
+# HfInferenceConfig
+model: meta-llama/Llama-3.1-8B-Instruct
+dataset: 12kimih/HiCUPID
+prompt: zero/system
+relevant: false
+peft: null
+rag: null
+batch_size: 1
+num_proc: 16
+log_every: 10
+split: null
+type: null
+num_samples: null
+peft_dir: null
+rag_dir: null
+save_dir: null
+seed: 42
+
+# ModelConfig
+model_name_or_path: null
+model_revision: main
+torch_dtype: bfloat16
+trust_remote_code: false
+attn_implementation: flash_attention_2
+use_peft: false
+load_in_8bit: false
+load_in_4bit: false
+bnb_4bit_quant_type: nf4
+use_bnb_nested_quant: false
+
+# HfGenerationConfig
+max_new_tokens: 200
+do_sample: true
+temperature: 0.6
+top_k: 50
+top_p: 1.0

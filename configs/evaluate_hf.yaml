@@ -1,0 +1,28 @@
+# HfEvaluationConfig
+model: 12kimih/Llama-3.2-3B-HiCUPID
+dataset: zero/system/Llama-3.1-8B-Instruct
+batch_size: 64
+num_proc: 16
+log_every: 10
+split: null
+type: null
+num_samples: null
+load_dir: null
+save_dir: null
+seed: 42
+
+# ModelConfig
+model_name_or_path: null
+model_revision: main
+torch_dtype: bfloat16
+trust_remote_code: false
+attn_implementation: flash_attention_2
+use_peft: false
+load_in_8bit: false
+load_in_4bit: false
+bnb_4bit_quant_type: nf4
+use_bnb_nested_quant: false
+
+# HfGenerationConfig
+max_new_tokens: 512
+do_sample: false

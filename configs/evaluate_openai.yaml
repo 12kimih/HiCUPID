@@ -1,0 +1,20 @@
+# OpenAIEvaluationConfig
+model: gpt-4o
+dataset: zero/system/Llama-3.1-8B-Instruct
+num_shards: 64
+num_proc: 16
+log_every: 10
+sleep: 180
+cancel: false
+reload: false
+disable_batch: false
+split: null
+type: null
+num_samples: null
+load_dir: null
+save_dir: null
+seed: 42
+
+# OpenAIGenerationConfigForParsing
+max_completion_tokens: 512
+temperature: 0.0

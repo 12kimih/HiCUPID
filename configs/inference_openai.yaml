@@ -1,0 +1,23 @@
+# OpenAIInferenceConfig
+model: gpt-4o-mini
+dataset: 12kimih/HiCUPID
+prompt: zero/system
+relevant: false
+rag: null
+num_shards: 64
+num_proc: 16
+log_every: 10
+sleep: 180
+cancel: false
+reload: false
+disable_batch: false
+split: null
+type: null
+num_samples: null
+rag_dir: null
+save_dir: null
+seed: 42
+
+# OpenAIGenerationConfigForParsing
+max_completion_tokens: 200
+temperature: 0.6
