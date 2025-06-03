@@ -1,6 +1,6 @@
 # 💖 HiCUPID
 
-We introduce 💖 **HiCUPID**, a new benchmark designed to train and evaluate Large Language Models (LLMs) for **personalized AI assistant** applications. 💖 **HiCUPID** addresses the lack of open-source conversational datasets for personalization by providing a tailored dataset and an automated evaluation model based on [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct), which closely aligns with human preferences. Both the **[dataset](https://huggingface.co/datasets/12kimih/HiCUPID)** and **[evaluation model](https://huggingface.co/12kimih/Llama-3.2-3B-HiCUPID)** are available through a [HuggingFace](https://huggingface.co/12kimih) repository, with the code to reproduce the results published on [GitHub](https://github.com/12kimih/HiCUPID). For more details, please refer to our paper *"Exploring the Potential of LLMs as Personalized Assistants: Dataset, Evaluation, and Analysis."*
+We introduce 💖 **HiCUPID**, a new benchmark designed to train and evaluate Large Language Models (LLMs) for **personalized AI assistant** applications. 💖 **HiCUPID** addresses the lack of open-source conversational datasets for personalization by providing a tailored dataset and an automated evaluation model based on [Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct), which closely aligns with human preferences. Both the **[dataset](https://huggingface.co/datasets/12kimih/HiCUPID)** and **[evaluation model](https://huggingface.co/12kimih/Llama-3.2-3B-HiCUPID)** are available through a [HuggingFace](https://huggingface.co/12kimih) repository, with the code to reproduce the results published on [GitHub](https://github.com/12kimih/HiCUPID). For more details, please refer to our paper *"Exploring the Potential of LLMs as Personalized Assistants: Dataset, Evaluation, and Analysis,"* which has been **accepted to ACL 2025 (Main)**. You can find the paper on [arXiv](https://arxiv.org/abs/2506.01262).
 
 ---
 
@@ -471,8 +471,13 @@ This project is licensed under the Apache-2.0 license - see the [LICENSE](LICENS
 If you use this project in your research or work, please consider citing it. Here's a suggested citation format in BibTeX:
 
 ```bibtex
-@article{hicupid2024,
-  title = {Exploring the Potential of LLMs as Personalized Assistants: Dataset, Evaluation, and Analysis},
-  year = {2024},
+@misc{mok2025exploringpotentialllmspersonalized,
+      title={Exploring the Potential of LLMs as Personalized Assistants: Dataset, Evaluation, and Analysis},
+      author={Jisoo Mok and Ik-hwan Kim and Sangkwon Park and Sungroh Yoon},
+      year={2025},
+      eprint={2506.01262},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.01262},
 }
 ```
