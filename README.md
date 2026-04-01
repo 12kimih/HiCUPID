@@ -466,6 +466,12 @@ This project is licensed under the Apache-2.0 license - see the [LICENSE](LICENS
 
 ---
 
+## 🙏 Acknowledgements
+
+This work was supported by the NVIDIA Academic Grant Program.
+
+---
+
 ## 🔖 Citation
 
 If you use this project in your research or work, please consider citing it. Here's a suggested citation format in BibTeX:
